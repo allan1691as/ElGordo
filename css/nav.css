@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Edu+QLD+Beginner:wght@500&family=Roboto+Mono&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Edu+QLD+Beginner:wght@500&family=Lilita+One&family=Roboto+Mono&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Edu+QLD+Beginner:wght@500&family=Inconsolata&family=Lilita+One&family=Roboto+Mono&family=Tilt+Neon&display=swap');
+
+:root{
+    --color-primario:#f5f5f8;
+    --color-secundario:#fff;
+    --fontcolor:#ffc700;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color:var(--color-primario);
+    width: 90%;
+    margin: auto;
+}
+.nav{
+    width: 100%;
+    background-color: var(--color-secundario);
+    justify-content: space-between;
+    display: flex;
+    height: 100px;
+    box-shadow: 0px 2px 2px gray;
+}
+
+.logonav{
+     width: 300px;
+    height:100%;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.tittlenav{
+  font-size: 2.2em;
+  font-weight:800;
+  margin: 6px auto;
+  font-family: 'Lilita One', cursive;
+  color:rgba(204, 204, 204, 0.533);
+}
+.minitittle{
+    font-size:1.2em;
+  font-weight: bolder;
+  margin: -9px auto;
+  font-family: 'Delius', cursive;
+  color:rgba(8, 106, 8, 0.661);
+}
+.listnav{
+   margin-right:2%;
+    display: flex;
+    width: 50%;
+    text-align: center;
+  
+}
+.listnav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav ul li{
+    display: flex;
+    align-items: center;
+}
+.nav ul li a{
+ text-decoration: none;
+ font-size: 1.8em;
+ color:black;
+ font-family: 'Tilt Neon', cursive;
+ font-weight: bold;
+}
+
+#check{
+    display: none;
+}
+
+.checkbtn{
+    display: none;
+    margin-right: 10px;
+}
+ @media(max-width:1000px){
+.container{
+    width: 100%;
+}
+.listnav{
+    margin: 0 1%;
+    width:70%;
+}
+ }
+@media(max-width:800px){
+ 
+    .container{
+    width:100%;
+ }
+ .nav{
+    width: 100%;
+ }
+ .ImgIcon{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+ }
+
+.logonav{
+    width: 400px;
+    height:100%;
+    margin: 0 10px;
+    position: relative;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.tittlenav{
+  position: absolute;
+  font-size: 2em;
+  font-weight:800;
+  margin: 15px auto;
+  font-family: 'Lilita One', cursive;
+  color:rgba(204, 204, 204, 0.533);
+ 
+}
+.minitittle{
+    font-size:1.2em;
+  font-weight: bolder;
+  margin:25px auto;
+  font-family: 'Delius', cursive;
+ color:rgba(8, 106, 8, 0.661);
+ 
+}
+ .listnav{
+    width: 100%;
+}
+.listnav ul{
+    
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    margin-top:12%;
+    margin-left: 90%;
+    height: 200px;
+    justify-content: center;
+    background-color:rgba(247, 247, 247, 0.5);
+    backdrop-filter: blur(2px);
+    transition: 1s;
+    z-index: 20;
+}
+.listnav ul li{
+    width: 60%;
+    margin: 0 auto;
+   background:rgba(175, 173, 173, 0.5);
+}
+.listnav ul li a{
+    color:#fff;
+    margin: 0 auto;
+}
+.checkbtn{
+    display: block;
+    margin: auto 5px;
+}
+#check:checked ~ .listnav ul{
+    margin-left:-16%;
+    position: absolute;
+}
+}
+@media(max-width:600px){
+    
+.listnav ul{
+    width: 105%;
+margin-top:20%;
+margin-left:65%;
+}
+#check:checked ~ .listnav ul{
+margin-left:-48%;
+position: absolute;
+    }
+}
